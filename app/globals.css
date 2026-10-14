@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
+@theme {
+  /* Typography */
+  --font-serif: var(--font-playfair), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Gold palette */
+  --color-gold-50:  #fdfaf2;
+  --color-gold-100: #f8f0d8;
+  --color-gold-200: #f0dea8;
+  --color-gold-300: #e3c574;
+  --color-gold-400: #d4b464;
+  --color-gold-500: #c8a24a;  /* Primary champagne gold */
+  --color-gold-600: #b08a38;
+  --color-gold-700: #8d6c2b;
+  --color-gold-800: #6f5422;
+  --color-gold-900: #5a431c;
+
+  /* Charcoal / near-black palette */
+  --color-charcoal-950: #080b12;
+  --color-charcoal-900: #0d0f13;
+  --color-charcoal-800: #101114;  /* Primary background */
+  --color-charcoal-700: #191a1e;  /* Card / elevated surfaces */
+  --color-charcoal-600: #222530;
+  --color-charcoal-500: #2e3241;
+
+  /* Warm ivory */
+  --color-ivory-50:  #ffffff;
+  --color-ivory-100: #f9f7f4;
+  --color-ivory-200: #f6f2e9;
+  --color-ivory-300: #ede5d0;
+
+  /* Muted grey */
+  --color-grey-400: #a6a6a6;
+  --color-grey-500: #888888;
+  --color-grey-600: #666666;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #101114;
+  --foreground: #f6f2e9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #c8a24a;
+  color: #101114;
+}
+
+/* Reduced motion: disable all animations for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101114;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e3241;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c8a24a;
+}
+
+/* Focus visible ring */
+:focus-visible {
+  outline: 2px solid #c8a24a;
+  outline-offset: 2px;
+}
+
+/* Smooth scale utility — keep transforms GPU-accelerated */
+.hover\:scale-103:hover {
+  transform: scale(1.03);
 }
