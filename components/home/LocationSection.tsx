@@ -72,12 +72,21 @@ export function LocationSection() {
                     <span className="text-[10px] text-[#A6A6A6] block">
                       Direct Front Desk:
                     </span>
-                    <a
-                      href={hotelConfig.contact.telLink}
-                      className="text-[#C8A24A] hover:underline text-xs font-semibold"
-                    >
-                      {hotelConfig.contact.primaryPhone}
-                    </a>
+                    <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                      <a
+                        href={hotelConfig.contact.telLink}
+                        className="text-[#C8A24A] hover:underline text-xs font-semibold"
+                      >
+                        {hotelConfig.contact.primaryPhone}
+                      </a>
+                      <span className="text-white/30 text-[11px]">•</span>
+                      <a
+                        href={hotelConfig.contact.secondaryTelLink}
+                        className="text-[#C8A24A] hover:underline text-xs font-semibold"
+                      >
+                        {hotelConfig.contact.secondaryPhone}
+                      </a>
+                    </div>
                   </div>
                 </div>
 

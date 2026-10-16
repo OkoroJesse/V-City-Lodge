@@ -94,15 +94,21 @@ export function Footer() {
             <ul className="space-y-2 text-xs">
               <li className="flex items-start gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#C8A24A] shrink-0 mt-0.5" />
-                <div>
+                <div className="space-y-0.5">
                   <a
                     href={hotelConfig.contact.telLink}
                     className="hover:text-[#C8A24A] font-medium text-white transition-colors block text-xs"
                   >
                     {hotelConfig.contact.primaryPhone}
                   </a>
-                  <span className="text-[9px] text-[#A6A6A6]">
-                    Google Hotels verified line
+                  <a
+                    href={hotelConfig.contact.secondaryTelLink}
+                    className="hover:text-[#C8A24A] font-medium text-white transition-colors block text-xs"
+                  >
+                    {hotelConfig.contact.secondaryPhone}
+                  </a>
+                  <span className="text-[9px] text-[#A6A6A6] block">
+                    Direct reception & enquiries
                   </span>
                 </div>
               </li>

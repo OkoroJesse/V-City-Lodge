@@ -111,7 +111,9 @@ export function BookingCtaSection() {
                 </div>
                 <div>
                   <div className="text-xs font-semibold uppercase tracking-wider">Call Front Desk Directly</div>
-                  <div className="text-xs text-[#C8A24A] font-medium">{hotelConfig.contact.primaryPhone}</div>
+                  <div className="text-xs text-[#C8A24A] font-medium">
+                    {hotelConfig.contact.primaryPhone} • {hotelConfig.contact.secondaryPhone}
+                  </div>
                 </div>
               </div>
               <ArrowRight className="w-3.5 h-3.5 text-[#C8A24A]/60 group-hover:text-[#C8A24A] group-hover:translate-x-0.5 transition-all shrink-0" />

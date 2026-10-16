@@ -71,6 +71,8 @@ export interface HotelConfig {
     primaryPhone: string;
     displayPhone: string;
     telLink: string;
+    secondaryPhone: string;
+    secondaryTelLink: string;
     whatsappNumber: string;
     whatsappLink: string;
     alternativePhone: {
@@ -137,6 +139,8 @@ export const hotelConfig: HotelConfig = {
     primaryPhone: "+234 807 984 7797",
     displayPhone: "+234 807 984 7797",
     telLink: "tel:+2348079847797",
+    secondaryPhone: "+234 803 819 9530",
+    secondaryTelLink: "tel:+2348038199530",
     whatsappNumber: "2348079847797",
     whatsappLink:
       "https://wa.me/2348079847797?text=Hello%20V%20City%20Lodge,%20I%20would%20like%20to%20enquire%20about%20room%20availability%20and%20rates.",

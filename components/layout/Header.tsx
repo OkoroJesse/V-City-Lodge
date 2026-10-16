@@ -224,13 +224,21 @@ export function Header() {
                 <span>WhatsApp Front Desk</span>
               </a>
 
-              <a
-                href={hotelConfig.contact.telLink}
-                className="flex items-center gap-2 text-[11px] text-[#F6F2E9]/80 hover:text-white pt-1"
-              >
-                <Phone className="w-3.5 h-3.5 text-[#C8A24A]" />
-                <span>{hotelConfig.contact.primaryPhone}</span>
-              </a>
+              <div className="flex flex-col gap-1.5 pt-1">
+                <a
+                  href={hotelConfig.contact.telLink}
+                  className="flex items-center gap-2 text-[11px] text-[#F6F2E9]/80 hover:text-white"
+                >
+                  <Phone className="w-3.5 h-3.5 text-[#C8A24A]" />
+                  <span>{hotelConfig.contact.primaryPhone}</span>
+                </a>
+                <a
+                  href={hotelConfig.contact.secondaryTelLink}
+                  className="flex items-center gap-2 text-[11px] text-[#F6F2E9]/80 hover:text-white pl-5.5"
+                >
+                  <span>{hotelConfig.contact.secondaryPhone}</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

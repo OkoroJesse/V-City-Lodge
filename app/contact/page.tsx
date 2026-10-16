@@ -4,7 +4,7 @@ import { ContactFormClient } from "./ContactFormClient";
 export const metadata: Metadata = {
   title: "Contact & Directions",
   description:
-    "Contact V City Lodge Hotel & Suite Ltd in Kubwa, Abuja. Reach our 24-hour reception desk at +234 807 984 7797, get driving directions to Chikakore Layout, or send an enquiry.",
+    "Contact V City Lodge Hotel & Suite Ltd in Kubwa, Abuja. Reach our 24-hour reception desk at +234 807 984 7797 or +234 803 819 9530, get driving directions to Chikakore Layout, or send an enquiry.",
 };
 
 export default function ContactPage() {

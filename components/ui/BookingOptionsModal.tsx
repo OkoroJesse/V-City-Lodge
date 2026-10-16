@@ -134,15 +134,20 @@ export function BookingOptionsModal({
             </div>
 
             {/* Direct Telephone Option */}
-            <div className="mt-3 text-center">
+            <div className="mt-3 text-center text-[11px] text-[#A6A6A6] flex items-center justify-center gap-1.5 flex-wrap">
+              <span>Or call:</span>
               <a
                 href={hotelConfig.contact.telLink}
-                className="text-[11px] text-[#A6A6A6] hover:text-[#C8A24A] transition-colors inline-flex items-center gap-1"
+                className="text-white hover:text-[#C8A24A] font-medium underline underline-offset-2 transition-colors"
               >
-                <span>Or call front desk:</span>
-                <span className="text-white font-medium underline underline-offset-2">
-                  {hotelConfig.contact.primaryPhone}
-                </span>
+                {hotelConfig.contact.primaryPhone}
+              </a>
+              <span>/</span>
+              <a
+                href={hotelConfig.contact.secondaryTelLink}
+                className="text-white hover:text-[#C8A24A] font-medium underline underline-offset-2 transition-colors"
+              >
+                {hotelConfig.contact.secondaryPhone}
               </a>
             </div>
           </motion.div>

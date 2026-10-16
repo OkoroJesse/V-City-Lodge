@@ -83,15 +83,23 @@ export function ContactFormClient() {
               <div className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-[#C4993A] shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-white block font-medium">Primary Telephone (Confirmed):</strong>
-                  <a
-                    href={hotelConfig.contact.telLink}
-                    className="text-sm font-semibold text-[#D4B25E] hover:underline"
-                  >
-                    {hotelConfig.contact.primaryPhone}
-                  </a>
-                  <p className="text-[10px] text-white/50 mt-0.5">
-                    Verified Google Hotels direct contact line.
+                  <strong className="text-white block font-medium">Front Desk & Reservations:</strong>
+                  <div className="flex flex-col gap-1 mt-0.5">
+                    <a
+                      href={hotelConfig.contact.telLink}
+                      className="text-sm font-semibold text-[#D4B25E] hover:underline"
+                    >
+                      {hotelConfig.contact.primaryPhone}
+                    </a>
+                    <a
+                      href={hotelConfig.contact.secondaryTelLink}
+                      className="text-sm font-semibold text-[#D4B25E] hover:underline"
+                    >
+                      {hotelConfig.contact.secondaryPhone}
+                    </a>
+                  </div>
+                  <p className="text-[10px] text-white/50 mt-1">
+                    Direct reception & enquiries lines.
                   </p>
                 </div>
               </div>
